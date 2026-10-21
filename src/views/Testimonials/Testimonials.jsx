@@ -1,2 +1,33 @@
-import Section from'../../components/Section/Section';import useTestimonialsViewModel from'../../viewmodels/useTestimonialsViewModel';import styles from'./Testimonials.module.css'
-export default function Testimonials(){const{testimonials}=useTestimonialsViewModel();return <Section id="avaliacoes" eyebrow="Já conquistou a turma" title="Quem testou não quer voltar ao silêncio"><div className={styles.grid}>{testimonials.map(item=><article key={item.name}><div className={styles.stars} aria-label={`${item.rating} de 5 estrelas`}>{'★'.repeat(item.rating)}</div><blockquote>“{item.text}”</blockquote><strong>{item.name}</strong><span>{item.role}</span></article>)}</div><p className={styles.note}>Depoimentos e dados apresentados são fictícios, criados para este projeto acadêmico.</p></Section>}
+import Section from "../../components/Section/Section";
+import useTestimonialsViewModel from "../../viewmodels/useTestimonialsViewModel";
+import styles from "./Testimonials.module.css";
+export default function Testimonials() {
+  const { testimonials } = useTestimonialsViewModel();
+  return (
+    <Section
+      id="avaliacoes"
+      eyebrow="Já conquistou a turma"
+      title="Quem testou não quer voltar ao silêncio"
+    >
+      <div className={styles.grid}>
+        {testimonials.map((item) => (
+          <article key={item.name}>
+            <div
+              className={styles.stars}
+              aria-label={`${item.rating} de 5 estrelas`}
+            >
+              {"★".repeat(item.rating)}
+            </div>
+            <blockquote>“{item.text}”</blockquote>
+            <strong>{item.name}</strong>
+            <span>{item.role}</span>
+          </article>
+        ))}
+      </div>
+      <p className={styles.note}>
+        Depoimentos e dados apresentados são fictícios, criados para este
+        projeto acadêmico.
+      </p>
+    </Section>
+  );
+}

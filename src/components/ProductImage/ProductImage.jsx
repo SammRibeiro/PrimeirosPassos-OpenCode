@@ -1,2 +1,34 @@
-import{useEffect,useState}from'react';import styles from'./ProductImage.module.css'
-export default function ProductImage({src,alt,width,height,fallback,priority=false,className=''}){const[failed,setFailed]=useState(false);useEffect(()=>setFailed(false),[src]);return <div className={`${styles.frame} ${className}`} style={{aspectRatio:`${width}/${height}`}}>{failed?fallback:<img src={src} alt={alt} width={width} height={height} loading={priority?'eager':'lazy'} fetchPriority={priority?'high':'auto'} onError={()=>setFailed(true)}/>}</div>}
+import { useEffect, useState } from "react";
+import styles from "./ProductImage.module.css";
+export default function ProductImage({
+  src,
+  alt,
+  width,
+  height,
+  fallback,
+  priority = false,
+  className = "",
+}) {
+  const [failed, setFailed] = useState(false);
+  useEffect(() => setFailed(false), [src]);
+  return (
+    <div
+      className={`${styles.frame} ${className}`}
+      style={{ aspectRatio: `${width}/${height}` }}
+    >
+      {failed ? (
+        fallback
+      ) : (
+        <img
+          src={src}
+          alt={alt}
+          width={width}
+          height={height}
+          loading={priority ? "eager" : "lazy"}
+          fetchPriority={priority ? "high" : "auto"}
+          onError={() => setFailed(true)}
+        />
+      )}
+    </div>
+  );
+}

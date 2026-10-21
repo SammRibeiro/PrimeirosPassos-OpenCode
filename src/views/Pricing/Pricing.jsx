@@ -1,2 +1,46 @@
-import Badge from'../../components/Badge/Badge';import Button from'../../components/Button/Button';import Section from'../../components/Section/Section';import usePricingViewModel from'../../viewmodels/usePricingViewModel';import styles from'./Pricing.module.css'
-export default function Pricing({onReserve}){const vm=usePricingViewModel();return <Section id="planos" eyebrow="Escolha seu kit" title="Um plano para cada tipo de rotina" intro="Frete grátis e 30 dias para testar."><label className={styles.toggle}><span>À vista</span><input type="checkbox" checked={vm.installments} onChange={vm.togglePayment}/><i/><span>10x</span></label><div className={styles.grid}>{vm.plans.map(plan=><article key={plan.id} className={plan.featured?styles.featured:''}>{plan.featured&&<Badge>Mais escolhido</Badge>}<h3>{plan.name}</h3><p>{plan.description}</p><strong className={styles.price}>{vm.formatPrice(plan)}</strong><ul>{plan.features.map(x=><li key={x}>✓ {x}</li>)}</ul><Button onClick={()=>onReserve(plan.id)}>Reservar</Button></article>)}</div></Section>}
+import Badge from "../../components/Badge/Badge";
+import Button from "../../components/Button/Button";
+import Section from "../../components/Section/Section";
+import usePricingViewModel from "../../viewmodels/usePricingViewModel";
+import styles from "./Pricing.module.css";
+export default function Pricing({ onReserve }) {
+  const vm = usePricingViewModel();
+  return (
+    <Section
+      id="planos"
+      eyebrow="Escolha seu kit"
+      title="Um plano para cada tipo de rotina"
+      intro="Frete grátis e 30 dias para testar."
+    >
+      <label className={styles.toggle}>
+        <span>À vista</span>
+        <input
+          type="checkbox"
+          checked={vm.installments}
+          onChange={vm.togglePayment}
+        />
+        <i />
+        <span>10x</span>
+      </label>
+      <div className={styles.grid}>
+        {vm.plans.map((plan) => (
+          <article
+            key={plan.id}
+            className={plan.featured ? styles.featured : ""}
+          >
+            {plan.featured && <Badge>Mais escolhido</Badge>}
+            <h3>{plan.name}</h3>
+            <p>{plan.description}</p>
+            <strong className={styles.price}>{vm.formatPrice(plan)}</strong>
+            <ul>
+              {plan.features.map((x) => (
+                <li key={x}>✓ {x}</li>
+              ))}
+            </ul>
+            <Button onClick={() => onReserve(plan.id)}>Reservar</Button>
+          </article>
+        ))}
+      </div>
+    </Section>
+  );
+}

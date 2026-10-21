@@ -1,1 +1,8 @@
-export const bagItems=[{id:'notebook',name:'Notebook',essential:true},{id:'charger',name:'Carregador',essential:true},{id:'lunch',name:'Marmita',essential:true},{id:'bottle',name:'Garrafa',essential:true},{id:'keys',name:'Chaves',essential:true},{id:'headphones',name:'Fones',essential:false}]
+export const bagItems = [
+  { id: "notebook", name: "Notebook", essential: true },
+  { id: "charger", name: "Carregador", essential: true },
+  { id: "lunch", name: "Marmita", essential: true },
+  { id: "bottle", name: "Garrafa", essential: true },
+  { id: "keys", name: "Chaves", essential: true },
+  { id: "headphones", name: "Fones", essential: false },
+];

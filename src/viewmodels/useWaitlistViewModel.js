@@ -1,4 +1,67 @@
 // Owns waitlist form, validation, modal effects and success state.
-import{useEffect,useRef,useState}from'react';import{plans}from'../models/plans';import{validateWaitlist}from'../models/waitlist'
-const empty={name:'',email:'',plan:'campus'}
-export default function useWaitlistViewModel(){const[isOpen,setIsOpen]=useState(false),[values,setValues]=useState(empty),[errors,setErrors]=useState({}),[success,setSuccess]=useState(null);const firstInputRef=useRef(null);function open(plan='campus'){setValues(v=>({...v,plan}));setErrors({});setSuccess(null);setIsOpen(true)}function close(){setIsOpen(false)}function change(event){const{name,value}=event.target;setValues(v=>({...v,[name]:value}));setErrors(v=>({...v,[name]:''}))}function submit(event){event.preventDefault();const next=validateWaitlist(values);setErrors(next);if(!next.name&&!next.email)setSuccess({name:values.name.trim(),position:Math.floor(Math.random()*800)+101})}useEffect(()=>{if(!isOpen)return;document.body.classList.add('modalOpen');const timer=setTimeout(()=>firstInputRef.current?.focus(),0);const onKey=e=>{if(e.key==='Escape')close()};document.addEventListener('keydown',onKey);return()=>{clearTimeout(timer);document.body.classList.remove('modalOpen');document.removeEventListener('keydown',onKey)}},[isOpen]);return{isOpen,values,errors,success,plans,firstInputRef,open,close,change,submit}}
+import { useEffect, useRef, useState } from "react";
+import { plans } from "../models/plans";
+import { validateWaitlist } from "../models/waitlist";
+const empty = { name: "", email: "", plan: "campus" };
+export default function useWaitlistViewModel() {
+  const [isOpen, setIsOpen] = useState(false),
+    [values, setValues] = useState(empty),
+    [errors, setErrors] = useState({}),
+    [success, setSuccess] = useState(null);
+
+  const firstInputRef = useRef(null);
+
+  function open(plan = "campus") {
+    setValues((v) => ({ ...v, plan }));
+    setErrors({});
+    setSuccess(null);
+    setIsOpen(true);
+  }
+  function close() {
+    setIsOpen(false);
+  }
+
+  function change(event) {
+    const { name, value } = event.target;
+    setValues((v) => ({ ...v, [name]: value }));
+    setErrors((v) => ({ ...v, [name]: "" }));
+  }
+
+  function submit(event) {
+    event.preventDefault();
+    const next = validateWaitlist(values);
+    setErrors(next);
+    if (!next.name && !next.email)
+      setSuccess({
+        name: values.name.trim(),
+        position: Math.floor(Math.random() * 800) + 101,
+      });
+  }
+  useEffect(() => {
+    if (!isOpen) return;
+    document.body.classList.add("modalOpen");
+    const timer = setTimeout(() => firstInputRef.current?.focus(), 0);
+    const onKey = (e) => {
+      if (e.key === "Escape") close();
+    };
+
+    document.addEventListener("keydown", onKey);
+    return () => {
+      clearTimeout(timer);
+      document.body.classList.remove("modalOpen");
+      document.removeEventListener("keydown", onKey);
+    };
+  }, [isOpen]);
+  return {
+    isOpen,
+    values,
+    errors,
+    success,
+    plans,
+    firstInputRef,
+    open,
+    close,
+    change,
+    submit,
+  };
+}

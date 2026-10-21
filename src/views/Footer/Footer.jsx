@@ -1,2 +1,26 @@
-import useNavbarViewModel from'../../viewmodels/useNavbarViewModel';import styles from'./Footer.module.css'
-export default function Footer(){const{menuItems,product}=useNavbarViewModel();return <footer className={styles.footer}><div><a href="#inicio" className={styles.logo}>◉ {product.name}</a><nav aria-label="Navegação do rodapé">{menuItems.map(x=><a key={x.href} href={x.href}>{x.label}</a>)}</nav><p>Projeto acadêmico fictício. PingPack não existe e nenhum pagamento é processado.</p><small>© {new Date().getFullYear()} PingPack.</small></div></footer>}
+import useNavbarViewModel from "../../viewmodels/useNavbarViewModel";
+import styles from "./Footer.module.css";
+export default function Footer() {
+  const { menuItems, product } = useNavbarViewModel();
+  return (
+    <footer className={styles.footer}>
+      <div>
+        <a href="#inicio" className={styles.logo}>
+          ◉ {product.name}
+        </a>
+        <nav aria-label="Navegação do rodapé">
+          {menuItems.map((x) => (
+            <a key={x.href} href={x.href}>
+              {x.label}
+            </a>
+          ))}
+        </nav>
+        <p>
+          Projeto acadêmico fictício. PingPack não existe e nenhum pagamento é
+          processado.
+        </p>
+        <small>© {new Date().getFullYear()} PingPack.</small>
+      </div>
+    </footer>
+  );
+}
