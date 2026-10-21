@@ -1,0 +1,2 @@
+import Button from'../../components/Button/Button';import styles from'./FinalCta.module.css'
+export default function FinalCta({onWaitlist}){return <section className={styles.cta}><div><span>Lote 1 com 500 unidades</span><h2>Sua memória merece uma ajudinha.</h2><p>Entre na lista e seja avisado quando a pré-venda começar.</p><Button onClick={()=>onWaitlist()}>Quero garantir a minha</Button></div><div className={styles.rings} aria-hidden="true"><i/><i/><i/></div></section>}

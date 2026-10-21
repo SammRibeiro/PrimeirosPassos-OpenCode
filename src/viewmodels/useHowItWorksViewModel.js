@@ -1,0 +1,3 @@
+// Owns the interactive packing demo state and verification rules.
+import{useState}from'react';import{bagItems}from'../models/bagItems';import{steps}from'../models/steps'
+export default function useHowItWorksViewModel(){const[packed,setPacked]=useState([]);const[result,setResult]=useState(null);function toggleItem(id){setPacked(v=>v.includes(id)?v.filter(x=>x!==id):[...v,id]);setResult(null)}function checkBag(){const missing=bagItems.filter(x=>x.essential&&!packed.includes(x.id)).map(x=>x.name.toLowerCase());setResult({success:!missing.length,message:missing.length?`Ping! Você esqueceu: ${missing.join(', ')}.`:'Tudo certo, bom dia!'})}function reset(){setPacked([]);setResult(null)}return{items:bagItems,steps,packed,result,toggleItem,checkBag,reset}}

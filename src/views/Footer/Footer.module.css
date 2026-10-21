@@ -1,0 +1,1 @@
+.footer{padding:3rem 1.25rem;background:var(--color-ink);color:#fff}.footer>div{width:min(100%,var(--max-width));margin:auto}.logo{font:700 1.4rem "Space Grotesk";text-decoration:none}.footer nav{display:flex;flex-wrap:wrap;gap:1rem;margin:1.5rem 0}.footer nav a{color:#d5d6e1;text-decoration:none}.footer p{color:#aeb0c1;max-width:700px}.footer small{color:#85889b}
