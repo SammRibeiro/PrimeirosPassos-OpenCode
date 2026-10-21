@@ -1,1 +1,82 @@
-.toggle{display:flex;justify-content:center;align-items:center;gap:.7rem;margin-bottom:2rem;font-weight:700}.toggle input{position:absolute;opacity:0}.toggle i{width:52px;height:29px;border-radius:20px;background:#c9c5bf;padding:4px;transition:.2s}.toggle i::before{content:"";display:block;width:21px;height:21px;border-radius:50%;background:#fff;transition:.2s}.toggle input:checked+i{background:var(--color-primary)}.toggle input:checked+i::before{transform:translateX(23px)}.grid{display:grid;gap:1rem}.grid article{position:relative;display:flex;flex-direction:column;padding:1.8rem;border:1px solid var(--color-line);border-radius:24px;background:#fff}.grid article>span{position:absolute;right:1rem;top:1rem}.grid h3{font-size:1.35rem;margin:1rem 0 .5rem}.grid p{color:var(--color-muted)}.price{font:700 2rem "Space Grotesk"}.grid ul{padding:0;list-style:none;line-height:2;margin-bottom:1.5rem}.grid button{margin-top:auto}.featured{outline:3px solid var(--color-primary);transform:scale(1.02);box-shadow:var(--shadow)}@media(min-width:900px){.grid{grid-template-columns:repeat(3,1fr)}}
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+.toggle input {
+  position: absolute;
+  opacity: 0;
+}
+.toggle i {
+  width: 52px;
+  height: 29px;
+  border-radius: 20px;
+  background: #c9c5bf;
+  padding: 4px;
+  transition: 0.2s;
+}
+.toggle i::before {
+  content: "";
+  display: block;
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background: #fff;
+  transition: 0.2s;
+}
+.toggle input:checked + i {
+  background: var(--color-primary);
+}
+.toggle input:checked + i::before {
+  transform: translateX(23px);
+}
+.grid {
+  display: grid;
+  gap: 1rem;
+}
+.grid article {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 1.8rem;
+  border: 1px solid var(--color-line);
+  border-radius: 24px;
+  background: #fff;
+}
+.grid article > span {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
+.grid h3 {
+  font-size: 1.35rem;
+  margin: 1rem 0 0.5rem;
+}
+.grid p {
+  color: var(--color-muted);
+}
+.price {
+  font: 700 2rem "Space Grotesk";
+}
+.grid ul {
+  padding: 0;
+  list-style: none;
+  line-height: 2;
+  margin-bottom: 1.5rem;
+}
+.grid button {
+  margin-top: auto;
+}
+.featured {
+  outline: 3px solid var(--color-primary);
+  transform: scale(1.02);
+  box-shadow: var(--shadow);
+}
+@media (min-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
