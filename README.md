@@ -28,7 +28,7 @@ O projeto usa **MVVM**:
 
 - **Model** (`src/models`): dados mockados e regras puras, como a validação do formulário. Não usa React.
 - **ViewModel** (`src/viewmodels`): hooks customizados (`useXxxViewModel`) que guardam o estado e as ações de cada seção. Não têm JSX.
-- **View** (`src/views` e `src/components`): componentes que só renderizam o que o ViewModel entrega, com CSS Modules.
+- **View** (`src/views` e `src/components`): componentes responsáveis pela renderização da interface. Recebem dados e ações dos ViewModels e também utilizam componentes visuais reutilizáveis, como as ilustrações SVG e os CSS Modules.
 
 Exemplo do fluxo no FAQ: o Model guarda as perguntas e respostas, o `useFaqViewModel` controla qual pergunta está aberta, e a View `Faq` mostra a lista e chama a ação de abrir ou fechar.
 
