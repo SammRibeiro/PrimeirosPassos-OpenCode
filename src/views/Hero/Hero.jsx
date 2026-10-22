@@ -1,11 +1,10 @@
 import Badge from "../../components/Badge/Badge";
 import Button from "../../components/Button/Button";
-import ProductImage from "../../components/ProductImage/ProductImage";
 import BackpackOutside from "../../components/illustrations/BackpackOutside";
 import useHeroViewModel from "../../viewmodels/useHeroViewModel";
 import styles from "./Hero.module.css";
 export default function Hero({ onWaitlist }) {
-  const { product, image } = useHeroViewModel();
+  const { product } = useHeroViewModel();
   return (
     <section id="inicio" className={styles.hero}>
       <div className={styles.copy}>
@@ -21,11 +20,7 @@ export default function Hero({ onWaitlist }) {
         <small>{product.trust}</small>
       </div>
       <div className={styles.visual}>
-        <ProductImage
-          {...image}
-          priority
-          fallback={<BackpackOutside square />}
-        />
+        <BackpackOutside />
         <i className={styles.ping} />
         <i className={styles.pingTwo} />
       </div>

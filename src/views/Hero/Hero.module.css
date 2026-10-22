@@ -41,6 +41,10 @@
   position: relative;
   filter: drop-shadow(0 25px 30px rgba(27, 31, 59, 0.15));
 }
+.visual svg {
+  width: 100%;
+  height: auto;
+}
 .ping,
 .pingTwo {
   position: absolute;

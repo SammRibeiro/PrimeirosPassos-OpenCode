@@ -1,11 +1,10 @@
 import Section from "../../components/Section/Section";
-import ProductImage from "../../components/ProductImage/ProductImage";
 import BackpackOutside from "../../components/illustrations/BackpackOutside";
 import BackpackInside from "../../components/illustrations/BackpackInside";
 import AppScreen from "../../components/illustrations/AppScreen";
 import useProductShowcaseViewModel from "../../viewmodels/useProductShowcaseViewModel";
 import styles from "./ProductShowcase.module.css";
-const fallbacks = {
+const illustrations = {
   outside: <BackpackOutside />,
   inside: <BackpackInside />,
   app: <AppScreen />,
@@ -38,7 +37,7 @@ export default function ProductShowcase() {
       <div
         className={`${styles.image} ${vm.active.id === "app" ? styles.phone : ""}`}
       >
-        <ProductImage {...vm.active.image} fallback={fallbacks[vm.active.id]} />
+        {illustrations[vm.active.id]}
       </div>
     </Section>
   );
