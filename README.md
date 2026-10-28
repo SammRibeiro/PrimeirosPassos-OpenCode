@@ -90,3 +90,10 @@ Pesquisei landing pages de venda de produtos online, principalmente de cursos, c
 O resultado foi muito satisfatório e superou minhas expectativas. A página ficou bonita e bem feita, com UX e UI limpos e fluidos, tanto na aparência quanto na usabilidade.
 
 Com mais tempo, eu profissionalizaria alguns elementos do site, como usar imagens reais do produto no lugar dos SVGs, e implementaria mais funcionalidades para explorar melhor o uso da IA.
+
+## Atividade 02 — Evolução com MCP
+
+A landing page foi validada em responsividade, funcionamento, acessibilidade, SEO e desempenho com Playwright MCP e Chrome DevTools MCP. Foram ampliadas as áreas de toque, adicionado um `robots.txt` válido e configuradas exclusões para os artefatos dos navegadores.
+
+- [Evidências técnicas e resultados](docs/mcp-evidencias.md)
+- [Relato da Atividade 02](docs/relato-atividade-02.md)
