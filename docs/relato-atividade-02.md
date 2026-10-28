@@ -30,7 +30,7 @@ Os demais fluxos passaram no diagnóstico: não houve rolagem horizontal, as ân
 
 ## Antes e depois
 
-O Lighthouse registrou Acessibilidade 100 e Boas práticas 100 antes e depois. O SEO passou de 91 para 100 em mobile e desktop. No trace local, o LCP variou de 306 ms para 244 ms e o CLS permaneceu em 0,01. As capturas comparativas estão em [antes](evidencias/antes/) e [depois](evidencias/depois/).
+O Lighthouse registrou Acessibilidade 100 e Boas práticas 100 antes e depois. O SEO passou de 91 para 100 em mobile e desktop. No trace local, o LCP variou de 306 ms para 244 ms e o CLS permaneceu em 0,01. As diferenças visuais entre as versões são discretas, pois o layout, o conteúdo e a identidade visual foram mantidos. As principais melhorias foram técnicas e de usabilidade, como o aumento das áreas de toque, a correção do `robots.txt` e a validação dos fluxos interativos. As capturas comparativas estão em [antes](evidencias/antes/) e [depois](evidencias/depois/).
 
 ## Como o MCP contribuiu (e seus limites)
 
