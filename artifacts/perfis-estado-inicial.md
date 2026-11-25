@@ -1,0 +1,36 @@
+- generic [ref=f1e119] [box=20,2946,874,579]:
+  - generic [ref=f1e120] [box=57,2983,800,102]:
+    - text: Demo interativa
+    - heading "Arrume sua mochila" [level=3] [ref=f1e121] [box=57,3011,800,40]
+    - paragraph [ref=f1e122] [box=57,3059,800,26]: Escolha sua rotina, marque o que você colocou e deixe a PingPack conferir.
+  - group "Perfil de organização" [ref=f1e123] [box=57,3110,800,44]:
+    - button "Faculdade" [pressed] [ref=f1e124] [cursor=pointer] [box=57,3110,114,44]
+    - button "Trabalho" [ref=f1e125] [cursor=pointer] [box=179,3110,102,44]
+    - button "Academia" [ref=f1e126] [cursor=pointer] [box=289,3110,111,44]
+  - generic [ref=f1e127] [box=57,3182,800,20]:
+    - strong [ref=f1e128] [box=57,3182,158,20]: Itens para faculdade
+    - generic [ref=f1e129] [box=727,3184,129,17]: 0 de 5 adicionados
+  - generic [ref=f1e130] [box=57,3214,800,199]:
+    - generic [ref=f1e131] [cursor=pointer] [box=57,3214,394,59]:
+      - checkbox "○ Notebook" [ref=f1e132] [box=77,3237,13,13]
+      - generic [ref=f1e133] [box=73,3230,18,27]: ○
+      - text: Notebook
+    - generic [ref=f1e134] [cursor=pointer] [box=463,3214,394,59]:
+      - checkbox "○ Carregador" [ref=f1e135] [box=483,3237,13,13]
+      - generic [ref=f1e136] [box=479,3230,18,27]: ○
+      - text: Carregador
+    - generic [ref=f1e137] [cursor=pointer] [box=57,3284,394,59]:
+      - checkbox "○ Caderno" [ref=f1e138] [box=77,3307,13,13]
+      - generic [ref=f1e139] [box=73,3300,18,27]: ○
+      - text: Caderno
+    - generic [ref=f1e140] [cursor=pointer] [box=463,3284,394,59]:
+      - checkbox "○ Estojo" [ref=f1e141] [box=483,3307,13,13]
+      - generic [ref=f1e142] [box=479,3300,18,27]: ○
+      - text: Estojo
+    - generic [ref=f1e143] [cursor=pointer] [box=57,3354,394,59]:
+      - checkbox "○ Garrafa" [ref=f1e144] [box=77,3377,13,13]
+      - generic [ref=f1e145] [box=73,3370,18,27]: ○
+      - text: Garrafa
+  - generic [ref=f1e146] [box=57,3437,800,51]:
+    - button "Fechar zíper e sair" [ref=f1e147] [cursor=pointer] [box=57,3437,184,51]
+    - button "Reiniciar" [ref=f1e148] [cursor=pointer] [box=252,3437,111,51]

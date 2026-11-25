@@ -1,0 +1,23 @@
+Total messages: 15 (Errors: 2, Warnings: 1)
+Returning 2 messages for level "error"
+
+[ERROR] React has detected a change in the order of Hooks called by %s. This will lead to bugs and errors if not fixed. For more information, read the Rules of Hooks: https://react.dev/link/rules-of-hooks
+
+   Previous render            Next render
+   ------------------------------------------------------
+%s   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ HowItWorks 1. useState                   useState
+2. useState                   useState
+3. undefined                  useState
+ @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=659abc8f:5856
+Error: Rendered more hooks than during the previous render.
+    at updateWorkInProgressHook (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=659abc8f:6056:19)
+    at updateReducer (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=659abc8f:6156:20)
+    at Object.useState (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=659abc8f:20743:20)
+    at exports.useState (http://localhost:5173/node_modules/.vite/deps/chunk-SU6MV2YM.js?v=162c98c4:989:36)
+    at useHowItWorksViewModel (http://localhost:5173/src/viewmodels/useHowItWorksViewModel.js?t=1795639498043:8:31)
+    at HowItWorks (http://localhost:5173/src/views/HowItWorks/HowItWorks.jsx?t=1795639498048:9:14)
+    at Object.react_stack_bottom_frame (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=659abc8f:20257:20)
+    at renderWithHooks (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=659abc8f:5916:24)
+    at updateFunctionComponent (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=659abc8f:7761:21)
+    at beginWork (http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=659abc8f:8841:20)

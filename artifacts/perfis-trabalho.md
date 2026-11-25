@@ -1,0 +1,36 @@
+- generic [ref=f1e119]:
+  - generic [ref=f1e120]:
+    - text: Demo interativa
+    - heading "Arrume sua mochila" [level=3] [ref=f1e121]
+    - paragraph [ref=f1e122]: Escolha sua rotina, marque o que você colocou e deixe a PingPack conferir.
+  - group "Perfil de organização" [ref=f1e123]:
+    - button "Faculdade" [ref=f1e124] [cursor=pointer]
+    - button "Trabalho" [active] [pressed] [ref=f1e125] [cursor=pointer]
+    - button "Academia" [ref=f1e126] [cursor=pointer]
+  - generic [ref=f1e127]:
+    - strong [ref=f1e128]: Itens para trabalho
+    - generic [ref=f1e129]: 0 de 5 adicionados
+  - generic [ref=f1e130]:
+    - generic [ref=f1e131] [cursor=pointer]:
+      - checkbox "○ Notebook" [ref=f1e132]
+      - generic [ref=f1e133]: ○
+      - text: Notebook
+    - generic [ref=f1e134] [cursor=pointer]:
+      - checkbox "○ Carregador" [ref=f1e135]
+      - generic [ref=f1e136]: ○
+      - text: Carregador
+    - generic [ref=f1e252] [cursor=pointer]:
+      - checkbox "○ Crachá" [ref=f1e253]
+      - generic [ref=f1e254]: ○
+      - text: Crachá
+    - generic [ref=f1e255] [cursor=pointer]:
+      - checkbox "○ Chaves" [ref=f1e256]
+      - generic [ref=f1e257]: ○
+      - text: Chaves
+    - generic [ref=f1e258] [cursor=pointer]:
+      - checkbox "○ Fones" [ref=f1e259]
+      - generic [ref=f1e260]: ○
+      - text: Fones
+  - generic [ref=f1e146]:
+    - button "Fechar zíper e sair" [ref=f1e147] [cursor=pointer]
+    - button "Reiniciar" [ref=f1e148] [cursor=pointer]

@@ -1,0 +1,32 @@
+- generic [ref=f1e119]:
+  - generic [ref=f1e120]:
+    - text: Demo interativa
+    - heading "Arrume sua mochila" [level=3] [ref=f1e121]
+    - paragraph [ref=f1e122]: Escolha sua rotina, marque o que você colocou e deixe a PingPack conferir.
+  - group "Perfil de organização" [ref=f1e123]:
+    - button "Faculdade" [ref=f1e124] [cursor=pointer]
+    - button "Trabalho" [ref=f1e125] [cursor=pointer]
+    - button "Academia" [active] [pressed] [ref=f1e126] [cursor=pointer]
+  - generic [ref=f1e127]:
+    - strong [ref=f1e128]: Itens para academia
+    - generic [ref=f1e129]: 0 de 4 adicionados
+  - generic [ref=f1e130]:
+    - generic [ref=f1e261] [cursor=pointer]:
+      - checkbox "○ Toalha" [ref=f1e262]
+      - generic [ref=f1e263]: ○
+      - text: Toalha
+    - generic [ref=f1e264] [cursor=pointer]:
+      - checkbox "○ Garrafa" [ref=f1e265]
+      - generic [ref=f1e266]: ○
+      - text: Garrafa
+    - generic [ref=f1e267] [cursor=pointer]:
+      - checkbox "○ Roupa de treino" [ref=f1e268]
+      - generic [ref=f1e269]: ○
+      - text: Roupa de treino
+    - generic [ref=f1e258] [cursor=pointer]:
+      - checkbox "○ Fones" [ref=f1e259]
+      - generic [ref=f1e260]: ○
+      - text: Fones
+  - generic [ref=f1e146]:
+    - button "Fechar zíper e sair" [ref=f1e147] [cursor=pointer]
+    - button "Reiniciar" [ref=f1e148] [cursor=pointer]

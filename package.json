@@ -1,1 +1,27 @@
-{"name":"pingpack","private":true,"version":"1.0.0","type":"module","scripts":{"dev":"vite","build":"vite build","preview":"vite preview"},"dependencies":{"react":"^19.1.1","react-dom":"^19.1.1"},"devDependencies":{"@vitejs/plugin-react":"^5.0.2","vite":"^7.1.7"}}
+{
+    "name": "pingpack",
+    "private": true,
+    "version": "1.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview",
+        "test:e2e": "playwright test",
+        "test:e2e:profiles": "playwright test tests/e2e/perfis-organizacao.spec.js",
+        "test:e2e:ui": "playwright test --ui",
+        "test:e2e:report": "playwright show-report"
+    },
+    "dependencies": {
+        "react": "^19.1.1",
+        "react-dom": "^19.1.1"
+    },
+    "devDependencies": {
+        "@playwright/test": "^1.65.1",
+        "@vitejs/plugin-react": "^4.3.4",
+        "concurrently": "^9.2.5",
+        "json-server": "0.17.4",
+        "playwright": "^1.65.1",
+        "vite": "^6.0.7"
+    }
+}

@@ -42,10 +42,47 @@
 .demo p {
   color: #cfd1df;
 }
+.profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+.profiles button {
+  min-height: 44px;
+  padding: 0.65rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+  font-weight: 700;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+.profiles button:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+.profiles .activeProfile {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+}
+.listHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1.75rem;
+}
+.listHeader span {
+  color: #cfd1df;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
 .checklist {
   display: grid;
   gap: 0.7rem;
-  margin: 1.5rem 0;
+  margin: 0.75rem 0 1.5rem;
 }
 .checklist label {
   display: flex;
@@ -63,10 +100,6 @@
 .checklist span {
   color: var(--color-accent);
   font-size: 1.3rem;
-}
-.checklist small {
-  margin-left: auto;
-  color: #bfc1ce;
 }
 .checked {
   outline: 2px solid var(--color-success);
@@ -87,6 +120,17 @@
 }
 .success {
   background: var(--color-success);
+}
+@media (max-width: 480px) {
+  .profiles {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .listHeader {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.3rem;
+  }
 }
 @media (min-width: 640px) {
   .steps {

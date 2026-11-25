@@ -4,3 +4,5 @@ dist/
 *.local
 .edge-debug/
 .playwright-mcp/
+test-results
+playwright-report

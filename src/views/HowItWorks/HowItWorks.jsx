@@ -22,7 +22,35 @@ export default function HowItWorks() {
         <div>
           <span className={styles.kicker}>Demo interativa</span>
           <h3>Arrume sua mochila</h3>
-          <p>Marque o que você colocou e deixe a PingPack conferir.</p>
+          <p>
+            Escolha sua rotina, marque o que você colocou e deixe a PingPack
+            conferir.
+          </p>
+        </div>
+        <div
+          className={styles.profiles}
+          role="group"
+          aria-label="Perfil de organização"
+        >
+          {vm.profiles.map((profile) => (
+            <button
+              key={profile.id}
+              type="button"
+              aria-pressed={vm.activeProfile.id === profile.id}
+              className={
+                vm.activeProfile.id === profile.id ? styles.activeProfile : ""
+              }
+              onClick={() => vm.selectProfile(profile.id)}
+            >
+              {profile.name}
+            </button>
+          ))}
+        </div>
+        <div className={styles.listHeader}>
+          <strong>Itens para {vm.activeProfile.name.toLowerCase()}</strong>
+          <span aria-live="polite">
+            {vm.packedCount} de {vm.items.length} adicionados
+          </span>
         </div>
         <div className={styles.checklist}>
           {vm.items.map((item) => (
@@ -37,7 +65,6 @@ export default function HowItWorks() {
               />
               <span>{vm.packed.includes(item.id) ? "✓" : "○"}</span>
               {item.name}
-              {!item.essential && <small>opcional</small>}
             </label>
           ))}
         </div>
